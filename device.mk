@@ -29,6 +29,11 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload
 
+# fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd
+
 # Additional Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
