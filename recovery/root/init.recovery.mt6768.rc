@@ -54,3 +54,9 @@ on boot
 on boot
     # disable mtk fpsgo
     write /sys/kernel/fpsgo/common/fpsgo_enable 0
+
+    # disable some cpu cores
+    write /sys/bus/cpu/devices/cpu4/online 0
+    write /sys/bus/cpu/devices/cpu5/online 0
+    write /sys/bus/cpu/devices/cpu6/online 0
+    write /sys/bus/cpu/devices/cpu7/online 0
