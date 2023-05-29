@@ -192,7 +192,7 @@ SHRP_NO_SAR_AUTOMOUNT := true
 SHRP_LITE := false
 
 # fukiame - this line will never change to true
-#    unless im really that good, which i am not
+# SHRP stopped their journey in April 2, 2023
 SHRP_OFFICIAL := false
 
 # SHRP Addons
@@ -200,4 +200,3 @@ SHRP_SKIP_DEFAULT_ADDON_1 := true
 SHRP_SKIP_DEFAULT_ADDON_2 := true
 SHRP_SKIP_DEFAULT_ADDON_3 := true
 SHRP_SKIP_DEFAULT_ADDON_4 := true
-INC_IN_REC_MAGISK := false
