@@ -172,3 +172,38 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 TW_INCLUDE_LOGICAL := my_product my_engineering my_preload
+
+# SHRP specific device flags
+SHRP_DEVICE_CODE := selene 
+SHRP_PATH := device/xiaomi/selene
+SHRP_MAINTAINER := fukiame
+SHRP_REC_TYPE := SAR
+SHRP_DEVICE_TYPE := A/B
+SHRP_REC := /dev/block/bootdevice/by-name/boot
+SHRP_EDL_MODE := 1
+SHRP_INTERNAL := /sdcard
+SHRP_EXTERNAL := /external_sd
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 1
+SHRP_AB := true
+SHRP_STATUSBAR_RIGHT_PADDING := 48
+SHRP_STATUSBAR_LEFT_PADDING := 48
+SHRP_NOTCH := true
+SHRP_EXPRESS := true
+SHRP_EXPRESS_USE_DATA := true
+SHRP_DARK := true
+SHRP_CUSTOM_FLASHLIGHT := false
+SHRP_FLASH_MAX_BRIGHTNESS := 300
+SHRP_NO_SAR_AUTOMOUNT := true
+SHRP_LITE := false
+
+# fukiame - this line will never change to true
+#    unless im really that good, which i am not
+SHRP_OFFICIAL := false
+
+# SHRP Addons
+SHRP_SKIP_DEFAULT_ADDON_1 := true
+SHRP_SKIP_DEFAULT_ADDON_2 := true
+SHRP_SKIP_DEFAULT_ADDON_3 := true
+SHRP_SKIP_DEFAULT_ADDON_4 := true
+INC_IN_REC_MAGISK := false
