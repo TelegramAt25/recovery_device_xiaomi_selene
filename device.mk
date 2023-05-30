@@ -43,6 +43,9 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.build.security_patch=2127-12-31
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
