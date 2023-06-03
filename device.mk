@@ -70,13 +70,4 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service \
     libhealthd.$(PRODUCT_PLATFORM)
 
-# libion & libxml2
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libion \
-    libxml2
-
-RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
-
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) 
