@@ -171,3 +171,7 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 TW_INCLUDE_LOGICAL := my_product my_engineering my_preload
+
+# PBRP specific build flags
+PB_DISABLE_DEFAULT_DM_VERITY := true
+PB_TORCH_PATH := "/sys/class/leds/flashlight"
