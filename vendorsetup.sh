@@ -42,7 +42,8 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 	if [ "$1" = "$FDEVICE" ] || [  "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 		# Version / Maintainer infos
 		export OF_MAINTAINER="fukiame"
-		export FOX_VERSION=R11.1_6
+		export FOX_VERSION=R11.1_3
+		export FOX_VARIANT=A12
 		export FOX_BUILD_TYPE="Unofficial"
 
 		# Device info
@@ -76,6 +77,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 		export OF_QUICK_BACKUP_LIST="/boot;/data;"
 		export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800" # Tue Jan 1 2019 00:00:00 GMT
 		export FOX_DELETE_AROMAFM=1
+		export FOX_USE_NANO_EDITOR=1
 
 		export FOX_DELETE_MAGISK_ADDON=1
 		export OF_FLASHLIGHT_ENABLE=0
