@@ -1,0 +1,8 @@
+[
+    {
+		"remote": "github",
+		"repository": "Kentanglu/Sea_Kernel-Selene",
+		"target_path": "kernel/xiaomi/selene",
+		"revision": "twelve-test"
+    }
+]
