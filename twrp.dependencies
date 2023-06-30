@@ -1,8 +1,8 @@
 [
     {
 		"remote": "github",
-		"repository": "Kentanglu/Sea_Kernel-Selene",
+		"repository": "TelegramAt25/android_kernel_xiaomi_selene",
 		"target_path": "kernel/xiaomi/selene",
-		"revision": "twelve-test"
+		"revision": "thirteen"
     }
 ]
