@@ -158,4 +158,3 @@ TW_FORCE_KEYMASTER_VER := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
-TW_INCLUDE_LOGICAL := my_product my_engineering my_preload
