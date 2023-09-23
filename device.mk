@@ -47,6 +47,14 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service-recovery \
+    android.hardware.gatekeeper@1.0-impl-recovery
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.gatekeeper=beanpod
+
 # Additional Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
