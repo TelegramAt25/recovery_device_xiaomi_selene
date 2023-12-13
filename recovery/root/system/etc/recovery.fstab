@@ -1,8 +1,8 @@
 # fstab
 system		/system		ext4	ro	wait,slotselect,logical
-system_ext	/system_ext	ext4	ro	wait,slotselect,logical
+system_ext	/system_ext	ext4	ro	wait,slotselect,logical,nofail
 vendor		/vendor		ext4	ro	wait,slotselect,logical
-odm		/odm		ext4	ro	wait,slotselect,logical
+odm		/odm		ext4	ro	wait,slotselect,logical,nofail
 product		/product	ext4	ro	wait,slotselect,logical
 
 /dev/block/platform/bootdevice/by-name/md_udc	/metadata	ext4	noatime,nosuid,nodev,discard,data=journal,commit=1	wait,check,formattable,first_stage_mount
