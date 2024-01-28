@@ -60,6 +60,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
     export OF_KEEP_DM_VERITY_FORCED_ENCRYPTION=1
     #export OF_SKIP_FBE_DECRYPTION_SDKVERSION=34
     export OF_SKIP_DECRYPTED_ADOPTED_STORAGE=1
+    export OF_DEFAULT_KEYMASTER_VERSION=4.0
 
     # Display / Leds
     export OF_SCREEN_H="2400"
