@@ -75,10 +75,6 @@ TARGET_RECOVERY_DEVICE_MODULES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.selene
 
-# Copy the vibrator into recovery image
-PRODUCT_COPY_FILES += \
-    $(OUT_DIR)/target/product/selene/system/bin/hw/android.hardware.vibrator-service.selene:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/hw/android.hardware.vibrator-service.selene
-
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
