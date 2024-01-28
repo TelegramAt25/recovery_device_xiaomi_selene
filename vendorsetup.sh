@@ -43,6 +43,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
     # Version / Maintainer infos
     export OF_MAINTAINER="TillYourTearGoes"
     export FOX_VERSION=R11.1_2
+    export OF_MAINTAINER_AVATAR="$(gettop)/device/xiaomi/selene/maintainer_avatar.png"
     export FOX_BUILD_TYPE="Unofficial"
 
     # Device info
