@@ -174,6 +174,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.
 RECOVERY_SDCARD_ON_DATA := true
 TW_EXCLUDE_APEX := true
 TW_PREPARE_DATA_MEDIA_EARLY := true
+TW_SKIP_ADDITIONAL_FSTAB := true
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
