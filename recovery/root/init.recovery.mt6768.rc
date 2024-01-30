@@ -75,6 +75,11 @@ on property:twrp.all.users.decrypted=true
     stop keymaster-4-0
     stop gatekeeper-1-0
 
+on property:twrp.decrypt.done=true
+    stop teei_daemon
+    stop keymaster-4-0
+    stop gatekeeper-1-0
+
 on boot
     start boot-hal-1-2
     start health-hal-2-1
