@@ -76,7 +76,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
     export OF_ENABLE_LPTOOLS=1
     export OF_ALLOW_DISABLE_NAVBAR=0
     export OF_QUICK_BACKUP_LIST="/boot;/data;"
-    export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800" # Tue Jan 1 2019 00:00:00 GMT
+    export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
     export FOX_REPLACE_BOOTIMAGE_DATE=1
     export FOX_DELETE_AROMAFM=1
 
