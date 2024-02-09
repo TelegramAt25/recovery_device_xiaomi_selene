@@ -71,6 +71,10 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libion \
     libxml2
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.selene
+
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so

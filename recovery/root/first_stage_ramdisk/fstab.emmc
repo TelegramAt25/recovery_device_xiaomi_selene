@@ -11,8 +11,8 @@ product /product ext4 ro wait,slotselect,avb,logical,first_stage_mount
 /dev/block/platform/bootdevice/by-name/persistbak /mnt/vendor/persistbak ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable
 
 # user data / encryption partitions
-/dev/block/platform/bootdevice/by-name/md_udc /metadata ext4 noatime,nosuid,nodev,discard wait,check,formattable,first_stage_mount,data=journal,commit=1
-/dev/block/platform/bootdevice/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,noflush_merge,reserve_root=134217,resgid=1065,inlinecrypt,checkpoint_merge,fsync_mode=nobarrier wait,check,formattable,quota,latemount,resize,reservedsize=128m,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
+/dev/block/platform/bootdevice/by-name/md_udc /metadata ext4 noatime,nosuid,nodev,discard,data=journal,commit=1 wait,check,formattable,first_stage_mount
+/dev/block/platform/bootdevice/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,noflush_merge,reserve_root=134217,resgid=1065,inlinecrypt,checkpoint_merge,fsync_mode=nobarrier wait,check,formattable,latemount,resize,reservedsize=128m,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2+emmc_optimized,keydirectory=/metadata/vold/metadata_encryption,fsverity
 /dev/block/platform/bootdevice/by-name/rescue /cache ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
 
 # IMEI / SIM / device info
