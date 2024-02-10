@@ -1,3 +1,5 @@
+persist.sys.fuse.passthrough.enable=true
+
 ro.mediatek.platform=MT6768
 ro.hardware=mt6768
 ro.sys.usb.storage.type=mtp
