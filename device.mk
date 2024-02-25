@@ -19,16 +19,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+    android.hardware.boot@1.2-service \
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2-impl.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
-    bootctrl.mt6768 \
     update_engine_client
-
-PRODUCT_PACKAGES += \
-    bootctrl.mt6768 \
-    bootctrl.mt6768.recovery
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -61,10 +57,6 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
-
-# MTK PlPath Utils
-PRODUCT_PACKAGES += \
-    mtk_plpath_utils.recovery
 
 # Health HAL
 PRODUCT_PACKAGES += \
