@@ -18,13 +18,6 @@
 /nvram		emmc	/dev/block/platform/bootdevice/by-name/nvram	flags=display="Nvram";backup=1;
 /persistent	emmc	/dev/block/platform/bootdevice/by-name/frp	flags=display="Persistent";backup=1;
 
-## misc
-/expdb		emmc	/dev/block/platform/bootdevice/by-name/expdb
-/seccfg		emmc	/dev/block/platform/bootdevice/by-name/seccfg	
-/tee		emmc	/dev/block/platform/bootdevice/by-name/tee	flags=slotselect;
-/spmfw		emmc	/dev/block/platform/bootdevice/by-name/spmfw	flags=slotselect;
-/otp		emmc	/dev/block/platform/bootdevice/by-name/otp
-
 # removable storage
 /sdcard1	vfat	/dev/block/mmcblk1p1	/dev/block/mmcblk1	flags=display="MicroSD";storage;wipeingui;removable;fsflags="utf8"
 /usb_otg	vfat	/dev/block/sda1		/dev/block/sda		flags=display="USB-Storage";storage;wipeingui;removable;fsflags="utf8"
