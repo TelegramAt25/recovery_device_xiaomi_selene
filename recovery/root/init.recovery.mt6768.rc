@@ -50,3 +50,7 @@ on property:twrp.decrypt.done=true
 on boot
     start boot-hal-1-2
     start health-hal-2-1
+
+on boot
+    # disable mtk fpsgo
+    write /sys/kernel/fpsgo/common/fpsgo_enable 0
