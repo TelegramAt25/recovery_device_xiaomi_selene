@@ -40,9 +40,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-service \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery
+    android.hardware.boot@1.1-service \
+    android.hardware.boot@1.1-impl \
+    android.hardware.boot@1.1-impl.recovery
 
 PRODUCT_PACKAGES += \
     create_pl_dev \

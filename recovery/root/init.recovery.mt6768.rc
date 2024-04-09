@@ -9,5 +9,5 @@ on fs
     install_keyring
 
 on boot
-    start boot-hal-1-2
+    start boot-hal-1-1
     start health-hal-2-1
