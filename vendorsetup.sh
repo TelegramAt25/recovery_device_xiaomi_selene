@@ -82,7 +82,8 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
     export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
     export FOX_REPLACE_BOOTIMAGE_DATE=1
     export FOX_DELETE_AROMAFM=1
-    export FOX_USE_NANO_EDITOR=1
+    export FOX_USE_NANO_EDITOR=0
+    export FOX_EXCLUDE_NANO_EDITOR=1
 
     export FOX_DELETE_INITD_ADDON=1
     export FOX_DELETE_MAGISK_ADDON=1
