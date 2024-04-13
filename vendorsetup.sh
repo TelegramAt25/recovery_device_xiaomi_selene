@@ -84,6 +84,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
     export FOX_DELETE_AROMAFM=1
     export FOX_USE_NANO_EDITOR=0
     export FOX_EXCLUDE_NANO_EDITOR=1
+    export FOX_REMOVE_ZIP_BINARY=1
 
     export FOX_DELETE_INITD_ADDON=1
     export FOX_DELETE_MAGISK_ADDON=1
