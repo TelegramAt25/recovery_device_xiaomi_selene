@@ -73,7 +73,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
     export OF_HIDE_NOTCH=1
     export OF_CLOCK_POS=1 # left and right clock positions available
     export OF_USE_GREEN_LED=0
-    export OF_FL_PATH1="/system/flashlight"
+    export OF_FL_PATH1="/sys/devices/platform/flashlights_led191/leds/torch-light0"
 
     # Other OrangeFox configs
     export OF_ENABLE_LPTOOLS=1
