@@ -152,7 +152,7 @@ TW_DEFAULT_BRIGHTNESS := 600
 TW_MAX_BRIGHTNESS := 2047
 
 # Vibrator
-TW_LEDS_HAPTICS_DIR := /sys/devices/platform/odm/odm:vibrator@0/leds/vibrator
+TW_NO_HAPTICS := true
 
 # USB
 TW_EXCLUDE_DEFAULT_USB_INIT := true
