@@ -92,6 +92,8 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
     export FOX_DELETE_MAGISK_ADDON=1
     export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
 
+    export OF_DONT_KEEP_LOG_HISTORY=1
+
     cp "${OF_MAINTAINER_AVATAR}" "$(gettop)/bootable/recovery/gui/theme/portrait_hdpi/images/Default/About/maintainer.png"
   fi
 fi
