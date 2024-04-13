@@ -90,6 +90,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 
     export FOX_DELETE_INITD_ADDON=1
     export FOX_DELETE_MAGISK_ADDON=1
+    export FOX_NO_SAMSUNG_SPECIAL=1
     export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
 
     export OF_DONT_KEEP_LOG_HISTORY=1
