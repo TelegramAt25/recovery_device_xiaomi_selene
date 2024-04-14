@@ -45,7 +45,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
     export OF_MAINTAINER_AVATAR="$(gettop)/device/xiaomi/selene/maintainer_avatar.png"
     export FOX_VERSION=R11.1_4
     export FOX_VANILLA_BUILD=1
-    #export FOX_VARIANT=A11
+    export FOX_VARIANT=sus
     export FOX_BUILD_TYPE="Unofficial"
 
     # Device info
