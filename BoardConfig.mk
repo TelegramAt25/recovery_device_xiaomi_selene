@@ -15,12 +15,16 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
-    system \
-    vendor \
-    product \
     boot \
-    vbmeta_vendor \
-    vbmeta_system
+    dtbo \
+    system \
+    system_ext \
+    product \
+    vendor \
+    odm \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor
 BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
@@ -87,8 +91,14 @@ BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 9122611200
 
+TARGET_COPY_OUT_PRODUCT := product
+TARGET_COPY_OUT_VENDOR := vendor
+
 # Platform
 TARGET_BOARD_PLATFORM := mt6768
+
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
@@ -96,38 +106,41 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
-# Security patch level
-PLATFORM_SECURITY_PATCH := 2127-12-31
-VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
-
 # System as Root
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Hack: prevent anti rollback
-PLATFORM_SECURITY_PATCH := 2099-12-31
-VENDOR_SECURITY_PATCH := 2099-12-31
+PLATFORM_SECURITY_PATCH := 2127-12-31
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 PLATFORM_VERSION := 99.87.36
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 
-# TWRP Configuration
+# TWRP config
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
-TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
+
+TW_SCREEN_BLANK_ON_BOOT := true
 TW_FRAMERATE := 60
 
-TW_USE_TOOLBOX := true
-TW_INCLUDE_REPACKTOOLS := true
-TW_DEVICE_VERSION := idkHelpPls
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
-TARGET_USES_MKE2FS := true
 BOARD_HAS_NO_SELECT_BUTTON := true
+TW_HAS_NO_RECOVERY_PARTITION := true
+TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
+
+TW_USE_TOOLBOX := true
+TARGET_USES_MKE2FS := true
+
+TW_INCLUDE_REPACKTOOLS := true
 TW_EXCLUDE_TWRPAPP := true
 TW_INCLUDE_FASTBOOTD := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_LIBRESETPROP := true
+
+TARGET_USES_LOGD := true
+TWRP_INCLUDE_LOGCAT := true
+
+TW_DEVICE_VERSION := T25
 
 # Configure status bar icons for regular TWRP builds only
 ifneq ($(OF_HIDE_NOTCH),1)
@@ -137,20 +150,21 @@ ifneq ($(OF_HIDE_NOTCH),1)
     TW_CUSTOM_BATTERY_POS := "790"
 endif
 
-# Device
+# Brightness
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 600
-TW_FRAMERATE := 60
-TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_MAX_BRIGHTNESS := 2047
+
+# Vibrator
 TW_LEDS_HAPTICS_DIR := /sys/devices/platform/odm/odm:vibrator@0/leds/vibrator
 
+# USB
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-RECOVERY_SDCARD_ON_DATA := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
-TW_HAS_NO_RECOVERY_PARTITION := true
+
+# Misc
+RECOVERY_SDCARD_ON_DATA := true
 TW_EXCLUDE_APEX := true
-TW_PREPARE_DATA_MEDIA_EARLY := true
 TW_SKIP_ADDITIONAL_FSTAB := true
 TW_FORCE_KEYMASTER_VER := true
 
@@ -158,3 +172,4 @@ TW_FORCE_KEYMASTER_VER := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
+TW_PREPARE_DATA_MEDIA_EARLY := true
