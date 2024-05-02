@@ -177,7 +177,6 @@ SHRP_OTG := /usb_otg
 
 # theming
 SHRP_DARK := true
-SHRP_LITE := true
 
 # "SHRP Express"
 SHRP_EXPRESS := true
